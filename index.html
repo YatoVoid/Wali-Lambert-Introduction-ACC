@@ -3,115 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Star Wars Text Effect</title>
     <style>
         body {
-            text-align: center;
-            color: black; /* Text color */
-            background-color: black; /* Optional: adds a black background for contrast */
-            font-family: Arial, sans-serif; /* Optional: sets a default font */
-            
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: yellow;
+            font-family: 'Arial', sans-serif;
+            font-size: 35px;
+            background: url('https://cdn.wallpapersafari.com/75/25/Vuxofs.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
+
+        .star-wars-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            perspective: 2000px; /* Perspective for 3D effect */
+        }
+
+        .star-wars-text {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            text-align: center;
+            transform: rotateX(20deg);
+            transform-origin: center bottom;
+            animation: crawl 70s linear infinite;
+        }
+
+        @keyframes crawl {
+            from {
+                top: 0;
+                transform: rotateX(30deg) translateZ(0);
+            }
+            to {
+                top: -8600px;
+                transform: rotateX(60deg) translateZ(-3000px);
+            }
+        }
+
         h1, h2, p, ul, li {
-
-        	font-size: 100px;
-            text-align: center;
-            color: black; /* Ensures text color is black */
-            text-shadow: 0.7px 0.7px 0 #EDC104, 0.7px -0.7px 0 #EDC104, 0.7px -0.7px 0 #EDC104, -0.7px 0.7px 0 #EDC104; /* Yellow outline effect */
-            
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            color: yellow; /* Text color */
+            text-shadow: 1px 1px 2px black; /* Optional: adds a shadow effect for better readability */
         }
-        a, a:hover, a:visited, a:active {
-	  		color: inherit;
-	  		text-decoration: none;
-  		}	
-  		
 
- 		@keyframes scroll{
- 			from{top:0;transform: translateZ(0) rotateX(20deg)}
- 			to {top:-7500px;transform: translateZ(-25000px) rotateX(21deg)}
- 		}	
+        ul, li {
+            list-style: none; /* Removes default list styling */
+        }
+
+        .credits {
+            margin: 20px 0;
+        }
+
+        .credits div {
+            margin: 5px 0;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+<body>
+    <div class="star-wars-container">
+        <div class="star-wars-text">
+            <h1 style="font-size: 100px;"><strong>Wali Lamert Presents</strong></h1>
+            <h2 style="font-size: 80px;">The Introduction</h2>
+
+            <h1>Educational Background</h1>
+            <p>I've completed high school with the Edexcel IGCSE and AS programs. My AS subjects included:</p>
+            <ul>
+                <li>Math</li>
+                <li>Computer Science</li>
+                <li>Physics</li>
+            </ul>
+
+            <p>Mandatory language classes were:</p>
+            <ul>
+                <li>English</li>
+                <li>Russian</li>
+                <li>Azerbaijani</li>
+            </ul>
+
+            <h2>STEP IT Courses</h2>
+            <p>During and before high school, I attended STEP IT courses where I learned:</p>
+            <ul>
+                <li>Scratch</li>
+                <li>Tynker</li>
+                <li>Code.org</li>
+                <li>Kodable</li>
+                <li>Swift</li>
+                <li>ScratchJr</li>
+                <li>Visual Studio</li>
+                <li>PyCharm Community</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>Atom</li>
+                <li>VS Code</li>
+            </ul>
+            <p>I am proficient in the following programming languages:</p>
+            <p>C++, C, C#, HolyC, Python, JavaScript, Java.&nbsp;</p>
+
+            <h2>College Enrollment</h2>
+            <p>After completing high school, I applied to college in May. This semester, I am taking the following 5 courses:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=wfDp2GLWAaA" style="color: yellow;">COSC-1336-010: Programming Fund I</a></li>
+                <li><a href="https://selfservice.austincc.edu/Student/Planning/DegreePlans?hideProxyDialog=false#" target="_blank" rel="noopener" style="color: yellow;">EDUC-1300-028: Learning Framework</a></li>
+                <li><a href="https://selfservice.austincc.edu/Student/Planning/DegreePlans?hideProxyDialog=false#" target="_blank" rel="noopener" style="color: yellow;">ENGL-1301-052: Composition I</a></li>
+                <li><a href="https://selfservice.austincc.edu/Student/Planning/DegreePlans?hideProxyDialog=false#" target="_blank" rel="noopener" style="color: yellow;">HIST-1301-012: U.S. History I</a></li>
+                <li><a href="https://selfservice.austincc.edu/Student/Planning/DegreePlans?hideProxyDialog=false#" target="_blank" rel="noopener" style="color: yellow;">MATH-1414-065: College Algebra PreCalc</a></li>
+            </ul>
+
+            <h2>Professional Experience</h2>
+            <p>With a strong IT background and hands-on experience from my internship, I enjoy learning new technologies and skills.</p>
+            <p>Currently, I'm working on an NFC scanner for hotels and businesses, with 1,500 cards ready for configuration.</p>
+            <p>At the same time, I'm helping to code elevator cameras to counteract the government's practice of making deals with businesses to maximize their profits.</p>
+            <p>In my country, if a business sells something at a low cost but in high volume, the government doesn't benefit as much.</p>
+            <p>Instead, they make deals where businesses sell products at nearly four times the actual cost, giving the government half of the income in exchange for market access.</p>
+            <p>This leads to building devices being sold at near-military prices.</p>
+            <p><strong>Passion for Technology</strong></p>
+
+            <p>I want to understand more advanced concepts and learn how to apply them in real life.</p>
+            <p>I am passionate about computer science and creating innovative solutions. I value:</p>
+            <ul>
+                <li><strong>Honesty in marketing and pricing</strong></li>
+                <li><strong>Enhancing user experience through technology</strong></li>
+                <li><strong>The process of building something from scratch</strong></li>
+            </ul>
+            <p>For me, the journey of creating and problem-solving is as important as the end product.</p>
 
 
 
-	<!-- <marquee direction="up" height="700" scrollamount="4" scrolldelay="100"> -->
-	<marquee direction="up" height="1000" scrollamount="17" scrolldelay="100">
 
-<h1 style="text-align: center;"><strong>Wali Lamert Presents</strong></h1>
-<h2 style="text-align: center;">The Introduction</h2>
 
-<h1>Educational Background</h1>
-<p>I've completed high school with the Edexcel IGCSE and AS programs. My AS subjects included:</p>
 
-<li>Math</li>
-<li>Computer Science</li>
-<li>Physics</li>
 
-<p>Mandatory language classes were:</p>
+            <div class="credits">
+        <h2>Directed by:</h2>
+        <div>George Lucas</div>
+        <div>Richard Marquand</div>
+        <div>Irvin Kershner</div>
+    </div>
 
-<li>English</li>
-<li>Russian</li>
-<li>Azerbaijani</li>
+    <div class="credits">
+        <h2>Produced by:</h2>
+        <div>Kathleen Kennedy</div>
+        <div>Gary Kurtz</div>
+        <div>Howard G. Kazanjian</div>
+    </div>
 
-</div>
-<div class="section">
-<h2>STEP IT Courses</h2>
-<p>During and before high school, I attended STEP IT courses where I learned:</p>
+    <div class="credits">
+        <h2>Written by:</h2>
+        <div>Lawrence Kasdan</div>
+        <div>Leigh Brackett</div>
+        <div>George Lucas</div>
+    </div>
 
-<li>Scratch</li>
-<li>Tynker</li>
-<li>Code.org</li>
-<li>Kodable</li>
-<li>Swift</li>
-<li>ScratchJr</li>
-<li>Visual Studio</li>
-<li>PyCharm Community</li>
-<li>Unity</li>
-<li>Unreal Engine</li>
-<li>Atom</li>
-<li>VS Code</li>
+    <div class="credits">
+        <h2>Executive Producers:</h2>
+        <div>J.J. Abrams</div>
+        <div>Bryan Burk</div>
+        <div>David Benioff</div>
+    </div>
 
-<p>I am proficient in the following programming languages:</p>
-<p>C++, C, C#, HolyC, Python, JavaScript, Java.&nbsp;</p>
-</div>
-<div class="section">
-<h2>College Enrollment</h2>
-<p>After completing high school, I applied to college in May. This semester, I am taking the following 5 courses:</p>
+    <div class="credits">
+        <h2>Art Direction by:</h2>
+        <div>Ralph McQuarrie</div>
+        <div>Doug Chiang</div>
+        <div>Iain McCaig</div>
+    </div>
 
-<li>COSC-1336-010: Programming Fund I</li>
-<li>EDUC-1300-028: Learning Framework</li>
-<li>ENGL-1301-052: Composition I</li>
-<li>HIST-1301-012: U.S. History I</li>
-<li>MATH-1414-065: College Algebra PreCalc</li>
+    <div class="credits">
+        <h2>Cinematography by:</h2>
+        <div>Gilbert Taylor</div>
+        <div>Peter Suschitzky</div>
+        <div>David Tattersall</div>
+    </div>
 
-</div>
-<div class="section">
-<h2>Professional Experience</h2>
-<br />
-<p><span>With a strong IT background and hands-on experience from my internship, I enjoy learning new technologies and skills. </span></p>
-<p><span >Currently, I'm working on an NFC scanner for hotels and businesses, with 1,500 cards ready for configuration. </span></p>
-<p><span >At the same time, I'm helping to code elevator cameras to counteract the government's practice of making deals with businesses to maximize their profits. </span></p>
-<p><span ">In my country, if a business sells something at a low cost but in high volume, the government doesn't benefit as much. </span></p>
-<p><span >Instead, they make deals where businesses sell products at nearly four times the actual cost, giving the government half of the income in exchange for market access. </span></p>
-<p><span >This leads to building devices being sold at near-military prices.</span></p>
-<br />
-<p><span font-weight: bold;">Passion for Technology</span></p>
-</div>
-<div class="section">
-<p>I want to understand more advanced concepts and learn how to apply them in real life.</p>
-<p>I am passionate about computer science and creating innovative solutions. I value:</p>
+    <div class="credits">
+        <h2>Visual Effects by:</h2>
+        <div>Industrial Light & Magic</div>
+        <div>John Knoll</div>
+        <div>Dennis Muren</div>
+    </div>
 
-<li><strong>Honesty in marketing and pricing</strong></li>
-<li><strong>Enhancing user experience through technology</strong></li>
-<li><strong>The process of building something from scratch</strong></li>
+    <div class="credits">
+        <h2>Costume Design by:</h2>
+        <div>John Mollo</div>
+        <div>Stuart Freeborn</div>
+        <div>Trisha Biggar</div>
+    </div>
 
-<p>For me, the journey of creating and problem-solving is as important as the end product.</p>
-  
-</div>
-  
-</div>
-<p></p>
-<p></p>
-<!-- Its amazing if you found this. Please add the option to change css and html of the document fully, this could lead to some 
- 			 very intresting results. -->
+    <div class="credits">
+        <h2>Sound Design by:</h2>
+        <div>Ben Burtt</div>
+        <div>Matthew Wood</div>
+        <div>Gary Rydstrom</div>
+    </div>
+
+    <div class="credits">
+        <h2>Music Composed by:</h2>
+        <div>John Williams</div>
+        <div>Michael Giacchino</div>
+        <div>William Ross</div>
+    </div>
+
+    
+
+    <h2>Thank You for Watching!</h2>
+    <h2>May the Force be with you!</h2>
+        </div>
+    </div>
+</body>
+</html>
