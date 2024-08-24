@@ -22,6 +22,7 @@
             height: 100vh;
             overflow: hidden;
             perspective: 2000px; /* Perspective for 3D effect */
+
         }
 
         .star-wars-text {
@@ -31,12 +32,12 @@
             text-align: center;
             transform: rotateX(20deg);
             transform-origin: center bottom;
-            animation: crawl 70s linear infinite;
-        }
+            animation: crawl 5s linear infinite;
+        }	
 
         @keyframes crawl {
             from {
-                top: 0;
+                top: 120%;
                 transform: rotateX(30deg) translateZ(0);
             }
             to {
